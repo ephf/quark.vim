@@ -1,17 +1,15 @@
-if has('nvim')
-	if pcall(require, 'nvim-web-devicons')
-		lua << EOF
+if exists(':WebDevIconsGetFileType')
+	lua << EOF
 
-		local devicons = require('nvim-web-devicons')
+	local devicons = require('nvim-web-devicons')
 
-		devicons.set_icon {
-			quark = {
-				icon = "*",
-				color = "#6c00ff",
-				name = "quark"
-			}
+	devicons.set_icon {
+		quark = {
+			icon = "*",
+			color = "#6c00ff",
+			name = "quark"
 		}
+	}
 
-		EOF
-	endif
+	EOF
 endif
