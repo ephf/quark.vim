@@ -1,3 +1,7 @@
+if exists("b:current_syntax")
+	finish
+endif
+
 syn keyword Constant true false null
 
 syn match Number '\v(0[xb]?)?\d+'
@@ -34,3 +38,5 @@ syn match Character '\v\'(\\.|.)\'' contains=NONE
 syn match Comment '\v//.{-}\n' contains=Todo
 syn region Comment start='/\*' end='\*/' keepend contains=Todo
 syn keyword Todo contained TODO FIXME XXX NOTE
+
+let b:current_syntax = "quark"
