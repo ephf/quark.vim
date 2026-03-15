@@ -1,9 +1,9 @@
-if exists('g:loaded_web_devicons') || pcall(require, 'nvim-web-devicons')
-	lua << EOF
+if has('nvim')
+	if pcall(require, 'nvim-web-devicons')
+		lua << EOF
 
-	local ok, devicons = pcall(require, 'nvim-web-devicons')
+		local devicons = require('nvim-web-devicons')
 
-	if ok then
 		devicons.set_icon {
 			quark = {
 				icon = "*",
@@ -11,7 +11,7 @@ if exists('g:loaded_web_devicons') || pcall(require, 'nvim-web-devicons')
 				name = "quark"
 			}
 		}
-	end
 
-	EOF
+		EOF
+	endif
 endif
