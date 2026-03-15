@@ -11,5 +11,5 @@ if exists(':WebDevIconsGetFileType')
 		}
 	}
 
-	EOF
+EOF
 endif
