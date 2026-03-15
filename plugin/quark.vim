@@ -11,6 +11,10 @@ if has('nvim')
 				name = "quark"
 			}
 		}
+
+		devicons.set_icon_by_filetype {
+			quark = "quark"
+		}
 	end
 
 EOF
