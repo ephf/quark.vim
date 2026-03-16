@@ -8,11 +8,13 @@ syn match Number '\v(0[xb]?)?\d+'
 syn keyword Boolean true false
 syn match Float '\v\d+\.\d+'
 
-syn match Type '\v[ui]\d+|<[A-Z]\w*|\w{-1,}_[tues]|\w+\ze::'
+syn match Type '\v[ui]\d+|<[A-Z]\w*|\w{-1,}_[tues]'
 syn keyword Type str bool void char uchar ichar usize isize
 
 syn match Identifier '\v\.@<=\w+|\w+\ze:'
 syn match Function '\v\w+\ze\('
+
+syn match Type '\w+\ze::'
 
 syn keyword Statement return break continue
 syn keyword Conditional if else switch
